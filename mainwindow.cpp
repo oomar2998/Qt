@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QTimer>
+
 QTimer *timer1=new QTimer();
 QTimer *timer2=new QTimer();
 
@@ -46,18 +47,16 @@ void MainWindow::incrementar_2()
 void MainWindow::on_pushButton_1_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
-    timer1->start(100);
-
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    close();
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->stackedWidget->setCurrentIndex(4);
     timer2->start(100);
 }
 
@@ -66,15 +65,15 @@ void MainWindow::on_pushButton_4_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-
 void MainWindow::on_pushButton_5_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+
+   ui->stackedWidget->setCurrentIndex(0);
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
 void MainWindow::on_pushButton_6_clicked()
@@ -84,10 +83,28 @@ void MainWindow::on_pushButton_6_clicked()
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(5);
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+    timer1->start(100);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    close();
+}
+
+
+void MainWindow::on_pushButton_11_clicked()
+{
+    ui ->Display_1->setText("swpkg name: h99l\nswpkg version:1.01 ");
+
 }
